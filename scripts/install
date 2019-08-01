@@ -96,7 +96,8 @@ ynh_install_app_dependencies jellyfin
 ###		- Remove the section "CLOSE A PORT" in the remove script
 
 # Find a free port
-port=$(ynh_find_port 8096)
+# port=$(ynh_find_port 8096)
+port=8096
 # Open this port
 yunohost firewall allow --no-upnp TCP $port 2>&1
 ynh_app_setting_set $app port $port
